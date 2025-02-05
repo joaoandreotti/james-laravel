@@ -7,7 +7,8 @@ use App\Models\James;
 
 class JamesController
 {
-    public function james() {
+    public function james()
+    {
         #$james = James::where('description', 'like', '%est%')->get();
         $james = James::all();
 

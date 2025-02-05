@@ -6,22 +6,20 @@
     <title>User List</title>
 </head>
 <body>
-    <h1>James List</h1>
+    <h1>User List</h1>
 
     <table border="1">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>User ID</th>
-                <th>Description</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($james as $jam)
+            @foreach ($users as $user)
                 <tr>
-                    <td>{{ $jam->id }}</td>
-                    <td>{{ $jam->user_id }}</td>
-                    <td>{{ $jam->description }}</td>
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->email }}</td>
                 </tr>
             @endforeach
         </tbody>

@@ -13,4 +13,11 @@ class UserController
         $user = User::where('email', $email)->first();
         return view('user', compact('user'));
     }
+
+    public function users()
+    {
+        $users = User::all();
+
+        return view('users', compact('users'));
+    }
 }
