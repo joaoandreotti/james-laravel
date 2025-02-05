@@ -11,6 +11,8 @@ class JamesController
         #$james = James::where('description', 'like', '%est%')->get();
         $james = James::all();
 
+        error_log($james);
+
         return view('james', compact('james'));
     }
 }
