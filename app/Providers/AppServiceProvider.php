@@ -20,9 +20,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        if (env('DB_CONNECTION') === 'sqlite' && env('DB_DATABASE') === ':memory:') {
-            \DB::statement('PRAGMA foreign_keys=ON;');
-            \Artisan::call('migrate:refresh --seed --force');
-        }
     }
 }
